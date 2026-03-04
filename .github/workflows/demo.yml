@@ -16,4 +16,6 @@ jobs:
         run: echo "$GREETING Saad. Today is $DAY_OF_WEEK."
 
       - name: Use repository variable
-        run: echo "Project Name: ${{ vars.DATACOM }}"
+        env:
+          REPO_VAR: ${{ vars.DATACOM }}
+        run: echo "Project Name: $REPO_VAR"
